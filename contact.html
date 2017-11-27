@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>ZeroTalk-A automated go training system</title>
+    <title>contact--ZeroTalk</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,52 +42,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">ZeroTalk</a>
+          <a class="navbar-brand" href="index.html">ZeroTalk</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="#">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-      <div>
-        <h1 class="text-center">ZeroTalk-Go</h1>
-        <h4>Introduction</h4>
-        <p>
-          ZeroTalk is a fully automated go training system based on the paper alphago-zero.&nbsp; It consists of three parts,
-          MCTS, Combined policy and value neural network, SelfPlay.  Network evaluation and self-play are executed in separate threads interactively
-          in same process. The network training part is put in another process.  At the end of self-play game stage, the train data is generated.
-          Network training process receives the data location and starts training, every 2000 optimization steps, it generates checkpoint and send
-          its location to self-paly process.
-        </p>
-        <br>
 
-        <h4>MCTS</h4>
-        <p>
-          MCTS is performed in during each step of self play game.  First, from root state of current game step, it select recursively a move
-          that maximize the UCT value, until a leaf node is met.  Second, for the leaf node, it generates all legal moves and creates children for
-          these moves. Third, the leaf node is evaluated using trained neural net model, generating moves distribution and value measuring the win
-          probability.  At the end of MCTS, the value is propogated up to root state.
-        </p>
-        <br>
+      <div class="starter-template">
+        <h1>Contact</h1>
+        <p class="lead">
 
-        <h4>Self-Play</h4>
-        <p>
-          At each slef play step, the program select the move(node) proportional to number of times visited generated from MCTS.
-        </p>
-        <br>
-
-        <h4>Deep Neural Network</h4>
-        <p>
-          During MCTS stage, each leaf node is evaluated by neural network, generating moving probability and state value. The training data is
-          generated from self play games.
         </p>
       </div>
+
     </div><!-- /.container -->
 
 
