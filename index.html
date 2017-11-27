@@ -60,7 +60,7 @@
         <h4>Introduction</h4>
         <p>
           ZeroTalk is a fully automated go training system based on the paper alphago-zero.&nbsp; It consists of three parts,
-          MCTS, Combined policy and value neural network, SelfPlay.  Network evaluation and self-play are executed in separate threads interactively
+          MCTS, unified policy and value neural network, self-play.  Network evaluation and self-play are executed in separate threads interactively
           in same process. The network training part is put in another process.  At the end of self-play game stage, the train data is generated.
           Network training process receives the data location and starts training, every 2000 optimization steps, it generates checkpoint and send
           its location to self-paly process.
